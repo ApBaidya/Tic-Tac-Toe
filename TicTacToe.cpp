@@ -1,6 +1,6 @@
 /*
 Aparajita Baidya
-10.2.2025
+10.10.2025
 Tic-Tac-Toe
 Create a 3x3 grid (letters and nums) --- 2d array
 User enters move
@@ -23,7 +23,28 @@ using namespace std;
 //when board full, end game, ask if play again, if 'n', gameon == false
 //make sure to get the user input properly 
 //reset board at top 
-
+int main()
+{
+  char gameon = 'y'; //this is obvious
+  char board[4][4] = {{' ', '1', '2', '3'},{'a', ' ',' ',' '},{'b',' ',' ',' '},{'c',' ',' ',' '}}; //initial board
+  int turn = 0; //whose turn
+  /*
+  for(int a = 0; a<4; a++)
+  {
+    for(int b = 0; b < 4; b++)
+    {
+      cout << board[a][b] << " ";
+    }
+    cout << endl;
+  } wanted to test out printing, may use this soon*/
+  while(gameon == 'y')
+    {
+      cout << 'a'<< endl;
+      cout << "do you want to play again? y/n" << endl;
+      cin >> gameon;//need to figure out how to get only first char from input
+    }
+  cout << "farewell";
+}
 
 //check move legality --> return bool   
 
